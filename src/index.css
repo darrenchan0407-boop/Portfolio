@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 280 20% 4%;
+    --foreground: 300 10% 96%;
+
+    --card: 280 15% 8%;
+    --card-foreground: 300 10% 95%;
+
+    --popover: 280 15% 8%;
+    --popover-foreground: 300 10% 95%;
+
+    --primary: 330 80% 65%;
+    --primary-foreground: 280 20% 4%;
+
+    --secondary: 280 15% 12%;
+    --secondary-foreground: 300 10% 85%;
+
+    --muted: 280 12% 15%;
+    --muted-foreground: 300 8% 60%;
+
+    --accent: 280 60% 60%;
+    --accent-foreground: 280 20% 4%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 280 15% 18%;
+    --input: 280 12% 16%;
+    --ring: 330 80% 65%;
+
+    --radius: 0.75rem;
+
+    --gradient-accent: linear-gradient(135deg, hsl(330 80% 65%), hsl(280 60% 60%));
+    --gradient-subtle: linear-gradient(135deg, hsl(280 15% 8%), hsl(280 15% 12%));
+    --shadow-glow: 0 0 40px -10px hsl(330 80% 65% / 0.4);
+    --shadow-card: 0 4px 30px -4px hsl(280 20% 0% / 0.6);
+    --text-shadow-3d: 0 1px 0 hsl(280 15% 18%), 0 2px 0 hsl(280 15% 16%), 0 3px 0 hsl(280 15% 14%), 0 4px 0 hsl(280 15% 12%), 0 5px 0 hsl(280 15% 10%), 0 6px 1px hsl(280 20% 0% / 0.1), 0 0 5px hsl(280 20% 0% / 0.1), 0 1px 3px hsl(280 20% 0% / 0.3), 0 3px 5px hsl(280 20% 0% / 0.2), 0 5px 10px hsl(280 20% 0% / 0.25);
+    --text-shadow-glow: 0 0 10px hsl(330 80% 65% / 0.5), 0 0 20px hsl(330 80% 65% / 0.3), 0 0 30px hsl(280 60% 60% / 0.2);
+  }
+
+  .theme-bright {
+    --background: 52 100% 96%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    --primary: 210 90% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 48 97% 63%;
+    --secondary-foreground: 222 47% 11%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 222 20% 40%;
+
+    --accent: 210 100% 97%;
+    --accent-foreground: 222 47% 11%;
+
+    --destructive: 0 72% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 40% 90%;
+    --input: 210 40% 96%;
+    --ring: 210 90% 50%;
+
+    --gradient-accent: linear-gradient(135deg, hsl(48 97% 63%), hsl(210 90% 50%));
+    --gradient-subtle: linear-gradient(135deg, hsl(0 0% 100%), hsl(210 40% 96%));
+    --shadow-glow: 0 0 40px -10px hsl(210 90% 50% / 0.35);
+    --shadow-card: 0 18px 45px -15px hsl(222 47% 11% / 0.15);
+    --text-shadow-3d: 0 1px 0 hsl(210 40% 90%), 0 2px 0 hsl(210 40% 88%), 0 3px 0 hsl(210 40% 86%);
+    --text-shadow-glow: 0 0 14px hsl(210 90% 50% / 0.45), 0 0 26px hsl(48 97% 63% / 0.35);
+  }
+
+  .theme-blue {
+    --background: 215 30% 9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222 25% 14%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 25% 14%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 90% 60%; /* bright blue */
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 330 85% 70%; /* warm pink */
+    --secondary-foreground: 215 30% 9%;
+
+    --muted: 215 18% 20%; /* blue-gray */
+    --muted-foreground: 220 15% 70%;
+
+    --accent: 330 85% 70%; /* pink accent */
+    --accent-foreground: 215 30% 9%;
+
+    --destructive: 0 72% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 215 20% 24%;
+    --input: 215 20% 20%;
+    --ring: 210 90% 60%;
+
+    --gradient-accent: linear-gradient(140deg, hsl(210 90% 60%), hsl(330 85% 70%));
+    --gradient-subtle: linear-gradient(135deg, hsl(222 25% 14%), hsl(215 18% 20%));
+    --shadow-glow: 0 0 40px -10px hsl(210 90% 60% / 0.45);
+    --shadow-card: 0 18px 45px -18px hsl(210 90% 10% / 0.8);
+    --text-shadow-3d: 0 1px 0 hsl(215 25% 16%), 0 2px 0 hsl(215 25% 14%), 0 3px 0 hsl(215 25% 12%);
+    --text-shadow-glow: 0 0 16px hsl(210 90% 70% / 0.55), 0 0 30px hsl(330 85% 70% / 0.4);
+  }
+
+  .theme-soft {
+    /* Soft modern minimalist: light gray-blue background, dark charcoal text */
+    --background: 220 22% 97%; /* #F5F7FA */
+    --foreground: 0 0% 10%;   /* #1A1A1A */
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
+
+    /* Primary buttons: indigo #4F46E5 */
+    --primary: 244 75% 58%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary buttons / links: gray #6B7280 */
+    --secondary: 220 9% 46%;
+    --secondary-foreground: 0 0% 100%;
+
+    /* Muted / subtle surfaces */
+    --muted: 220 16% 92%;
+    --muted-foreground: 220 10% 40%;
+
+    /* Accent elements: golden-yellow #FBBF24 */
+    --accent: 42 96% 58%;
+    --accent-foreground: 0 0% 10%;
+
+    --destructive: 0 72% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 16% 88%;
+    --input: 220 16% 92%;
+    --ring: 244 75% 58%;
+
+    --gradient-accent: linear-gradient(
+      135deg,
+      hsl(244 75% 58%),
+      hsl(42 96% 58%)
+    );
+    --gradient-subtle: linear-gradient(
+      135deg,
+      hsl(0 0% 100%),
+      hsl(220 16% 92%)
+    );
+
+    --shadow-glow: 0 0 30px -10px hsl(244 75% 58% / 0.35);
+    --shadow-card: 0 18px 45px -18px hsl(220 20% 40% / 0.18);
+
+    --text-shadow-3d: 0 1px 0 hsl(220 16% 92%), 0 2px 0 hsl(220 16% 90%);
+    --text-shadow-glow: 0 0 16px hsl(244 75% 70% / 0.45), 0 0 28px hsl(42 96% 60% / 0.35);
+  }
+
+    .theme-warm {
+      /* Warm & Friendly Theme */
+      --background: 36 100% 97%; /* #FFF8F0 (warm cream) */
+      --foreground: 0 0% 20%;    /* #333333 (dark gray) */
+
+      --card: 36 100% 97%;
+      --card-foreground: 0 0% 20%;
+
+      --popover: 36 100% 97%;
+      --popover-foreground: 0 0% 20%;
+
+      --primary: 2 100% 71%;     /* #FF6B6B (coral/red) */
+      --primary-foreground: 0 0% 100%;
+
+      --secondary: 48 100% 62%;  /* #FFD93D (warm yellow) */
+      --secondary-foreground: 0 0% 20%;
+
+      --muted: 36 100% 92%;
+      --muted-foreground: 0 0% 40%;
+
+      --accent: 174 61% 56%;     /* #4ECDC4 (turquoise) */
+      --accent-foreground: 0 0% 20%;
+
+      --destructive: 2 100% 71%; /* same as primary */
+      --destructive-foreground: 0 0% 100%;
+
+      --border: 36 100% 90%;
+      --input: 36 100% 92%;
+      --ring: 2 100% 71%;
+
+      --gradient-accent: linear-gradient(135deg, hsl(2 100% 71%), hsl(174 61% 56%));
+      --gradient-subtle: linear-gradient(135deg, hsl(36 100% 97%), hsl(48 100% 62%));
+      --shadow-glow: 0 0 40px -10px hsl(2 100% 71% / 0.3);
+      --shadow-card: 0 4px 30px -4px hsl(36 100% 90% / 0.15);
+      --text-shadow-3d: 0 1px 0 hsl(36 100% 90%), 0 2px 0 hsl(36 100% 88%), 0 3px 0 hsl(36 100% 86%);
+      --text-shadow-glow: 0 0 10px hsl(2 100% 71% / 0.3), 0 0 20px hsl(174 61% 56% / 0.2);
+
+      transition: background 0.3s ease;
+    }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+
+  /* Vertical writing mode for navigation */
+  .writing-mode-vertical-lr {
+    writing-mode: vertical-lr;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-accent);
+  }
+
+  .bg-gradient-accent {
+    background-image: var(--gradient-accent);
+  }
+
+  .bg-gradient-subtle {
+    background-image: var(--gradient-subtle);
+  }
+
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  /* Animation utilities */
+  .story-link {
+    @apply relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-primary after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left;
+  }
+
+  .hover-scale {
+    @apply transition-transform duration-200 hover:scale-105;
+  }
+
+  .text-3d {
+    text-shadow: var(--text-shadow-3d);
+  }
+
+  .text-glow {
+    text-shadow: var(--text-shadow-glow);
+  }
+
+  .text-3d-glow {
+    text-shadow: var(--text-shadow-3d), var(--text-shadow-glow);
+  }
+}
