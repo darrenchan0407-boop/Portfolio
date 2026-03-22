@@ -177,7 +177,7 @@ export const kevinWpPortfolio: Portfolio = {
       featured: false,
     },
   ],
-  theme: "warm",
+  theme: "blue",
   sections: ["hero", "about", "projects", "experience", "contact"],
   heroVariant: "bento",
   projectsVariant: "grid",

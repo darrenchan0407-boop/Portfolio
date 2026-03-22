@@ -131,7 +131,7 @@ export const ducPortfolio: Portfolio = {
       featured: true,
     },
   ],
-  theme: "warm",
+  theme: "blue",
   sections: ["hero", "projects", "experience", "about", "contact"],
   heroVariant: "bento",
   projectsVariant: "gallery",

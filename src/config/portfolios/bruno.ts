@@ -159,7 +159,7 @@ export const brunoPortfolio: Portfolio = {
       featured: true,
     },
   ],
-  theme: "warm",
+  theme: "soft",
   sections: ["hero", "about", "projects", "experience", "contact"],
   heroVariant: "bento",
   projectsVariant: "grid",

@@ -154,7 +154,7 @@ export const ilhamPortfolio: Portfolio = {
       featured: true,
     },
   ],
-  theme: "warm",
+  theme: "bright",
   sections: ["hero", "about", "experience", "projects", "contact"],
   heroVariant: "bento",
   projectsVariant: "grid",

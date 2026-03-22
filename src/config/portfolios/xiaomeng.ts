@@ -151,7 +151,7 @@ export const xiaomengPortfolio: Portfolio = {
       featured: false,
     },
   ],
-  theme: "warm",
+  theme: "default",
   sections: ["hero", "about", "projects", "experience", "contact"],
   heroVariant: "bento",
   projectsVariant: "grid",
