@@ -18,4 +18,8 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  build: {
+    /** Main chunk includes React + Three; ~1.4MB minified is expected without route-splitting */
+    chunkSizeWarningLimit: 1600,
+  },
 }));
