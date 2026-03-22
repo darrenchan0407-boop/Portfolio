@@ -35,6 +35,7 @@ export const xiaomengPortfolio: Portfolio = {
     {
       role: "Software Developer",
       company: "Navigate360",
+      companyDomain: "navigate360.com",
       period: "04/2025 — Present",
       description:
         "Leading full-stack development for customer-facing web experiences in React, Next.js, and TypeScript. Built scalable backend endpoints in Go and Node.js, implemented GraphQL APIs, and optimized infrastructure with Docker and Kubernetes.",
@@ -47,6 +48,7 @@ export const xiaomengPortfolio: Portfolio = {
     {
       role: "Software Developer",
       company: "Belun Technology Company Limited",
+      companyDomain: "belun.com",
       period: "10/2017 — 04/2025",
       description:
         "Built and maintained web applications in React, Next.js, and TypeScript. Owned backend services in Go and Node.js, designed PostgreSQL schemas, and implemented microservices architecture with Docker and Kubernetes.",
@@ -59,6 +61,7 @@ export const xiaomengPortfolio: Portfolio = {
     {
       role: "Software Developer Intern",
       company: "E-Xuncheng Technology Company Limited",
+      companyDomain: "xuncheng.com",
       period: "06/2016 — 07/2016",
       description:
         "Built web UI features using HTML5, CSS3, and JavaScript. Worked on React prototypes, implemented REST APIs with Node.js, and gained experience with containerization using Docker.",
@@ -148,11 +151,14 @@ export const xiaomengPortfolio: Portfolio = {
       featured: false,
     },
   ],
-  theme: "default",
+  theme: "warm",
   sections: ["hero", "about", "projects", "experience", "contact"],
-  heroVariant: "default",
+  heroVariant: "bento",
   projectsVariant: "grid",
   experienceVariant: "default",
   contactVariant: "default",
+  bento: {
+    globeRegion: "us",
+  },
 };
 

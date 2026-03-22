@@ -27,6 +27,7 @@ export const brunoPortfolio: Portfolio = {
     {
       role: "Senior Software Engineer",
       company: "Navigate360",
+      companyDomain: "navigate360.com",
       period: "May 2025 – Present",
       location: "Remote",
       description:
@@ -44,6 +45,7 @@ export const brunoPortfolio: Portfolio = {
     {
       role: "Senior Full-Stack Developer",
       company: "Ceiba Software",
+      companyDomain: "ceiba.com.co",
       period: "Aug 2023 – Mar 2025",
       location: "Remote",
       description:
@@ -61,6 +63,7 @@ export const brunoPortfolio: Portfolio = {
     {
       role: "Full Stack Engineer",
       company: "CESAR",
+      companyDomain: "cesar.org.br",
       period: "Jan 2019 – Jun 2023",
       location: "Recife, Brazil",
       description:
@@ -79,6 +82,7 @@ export const brunoPortfolio: Portfolio = {
     {
       role: "Software Engineer Intern",
       company: "Microsoft",
+      companyDomain: "microsoft.com",
       period: "Sep 2018 – Nov 2019",
       location: "Remote",
       description:
@@ -155,11 +159,14 @@ export const brunoPortfolio: Portfolio = {
       featured: true,
     },
   ],
-  theme: "soft",
+  theme: "warm",
   sections: ["hero", "about", "projects", "experience", "contact"],
-  heroVariant: "default",
+  heroVariant: "bento",
   projectsVariant: "grid",
   experienceVariant: "default",
   contactVariant: "default",
+  bento: {
+    globeRegion: "br",
+  },
 };
 

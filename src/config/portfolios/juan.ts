@@ -8,6 +8,7 @@ export const juanPortfolio: Portfolio = {
     phone: "+57 322 3040416",
     location: "Zipaquirá, Cundinamarca, Colombia",
     linkedin: "https://linkedin.com/in/juan-david-sereno",
+    timezone: "America/Bogota",
   },
   hero: {
     headline: "HELLO",
@@ -28,6 +29,7 @@ export const juanPortfolio: Portfolio = {
     {
       role: "Sr Full Stack Engineer / Consultant",
       company: "CloudNova Technologies",
+      companyDomain: "cloudnova.com",
       period: "Jan 2024 - Dec 2025",
       location: "Remote",
       description: "Owned full-stack delivery for web and mobile workflows: React + Next.js (TypeScript) on the frontend, and Go (Golang) + Node.js (Express) services behind a REST API gateway.",
@@ -51,6 +53,7 @@ export const juanPortfolio: Portfolio = {
     {
       role: "Full Stack Engineer",
       company: "Pacific Web Labs",
+      companyDomain: "pacificweblabs.com",
       period: "Sep 2022 - Dec 2023",
       location: "Remote",
       description: "Shipped customer-facing web features in React and Next.js with TypeScript, using TailwindCSS for consistent UI and quicker iteration with design.",
@@ -71,6 +74,7 @@ export const juanPortfolio: Portfolio = {
     {
       role: "Full Stack Developer",
       company: "Virtual Andes Digital Marketing & IT Solutions OPC",
+      companyDomain: "virtualandes.com",
       period: "May 2021 - Aug 2022",
       location: "Zipaquirá, Colombia",
       description: "Built responsive web apps with React (TypeScript), HTML5, and CSS3; used TailwindCSS where it sped up consistent landing pages and admin views.",
@@ -142,8 +146,15 @@ export const juanPortfolio: Portfolio = {
   ],
   theme: "warm",
   sections: ["hero", "about", "experience", "projects", "contact"],
-  heroVariant: "default",
+  heroVariant: "bento",
   projectsVariant: "grid",
   experienceVariant: "default",
   contactVariant: "default",
+  bento: {
+    philosophyLead: "Interfaces you can feel.",
+    showcaseTitle: "Founder of",
+    showcaseGradientWord: "Rune",
+    showcaseSubtitle: "Crafting digital experiences",
+    globeRegion: "co",
+  },
 };

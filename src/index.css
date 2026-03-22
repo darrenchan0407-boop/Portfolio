@@ -22,7 +22,7 @@
     --secondary-foreground: 300 10% 85%;
 
     --muted: 280 12% 15%;
-    --muted-foreground: 300 8% 60%;
+    --muted-foreground: 300 8% 72%;
 
     --accent: 280 60% 60%;
     --accent-foreground: 280 20% 4%;
@@ -61,7 +61,7 @@
     --secondary-foreground: 222 47% 11%;
 
     --muted: 210 40% 96%;
-    --muted-foreground: 222 20% 40%;
+    --muted-foreground: 222 22% 30%;
 
     --accent: 210 100% 97%;
     --accent-foreground: 222 47% 11%;
@@ -69,7 +69,7 @@
     --destructive: 0 72% 55%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 210 40% 90%;
+    --border: 210 35% 82%;
     --input: 210 40% 96%;
     --ring: 210 90% 50%;
 
@@ -98,7 +98,7 @@
     --secondary-foreground: 215 30% 9%;
 
     --muted: 215 18% 20%; /* blue-gray */
-    --muted-foreground: 220 15% 70%;
+    --muted-foreground: 220 12% 78%;
 
     --accent: 330 85% 70%; /* pink accent */
     --accent-foreground: 215 30% 9%;
@@ -139,7 +139,7 @@
 
     /* Muted / subtle surfaces */
     --muted: 220 16% 92%;
-    --muted-foreground: 220 10% 40%;
+    --muted-foreground: 220 14% 28%;
 
     /* Accent elements: golden-yellow #FBBF24 */
     --accent: 42 96% 58%;
@@ -148,7 +148,7 @@
     --destructive: 0 72% 55%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 16% 88%;
+    --border: 220 16% 80%;
     --input: 220 16% 92%;
     --ring: 244 75% 58%;
 
@@ -173,13 +173,13 @@
     .theme-warm {
       /* Warm & Friendly Theme */
       --background: 36 100% 97%; /* #FFF8F0 (warm cream) */
-      --foreground: 0 0% 20%;    /* #333333 (dark gray) */
+      --foreground: 0 0% 16%;
 
-      --card: 36 100% 97%;
-      --card-foreground: 0 0% 20%;
+      --card: 0 0% 100%;
+      --card-foreground: 0 0% 16%;
 
-      --popover: 36 100% 97%;
-      --popover-foreground: 0 0% 20%;
+      --popover: 0 0% 100%;
+      --popover-foreground: 0 0% 16%;
 
       --primary: 2 100% 71%;     /* #FF6B6B (coral/red) */
       --primary-foreground: 0 0% 100%;
@@ -187,8 +187,8 @@
       --secondary: 48 100% 62%;  /* #FFD93D (warm yellow) */
       --secondary-foreground: 0 0% 20%;
 
-      --muted: 36 100% 92%;
-      --muted-foreground: 0 0% 40%;
+      --muted: 36 60% 94%;
+      --muted-foreground: 0 0% 30%;
 
       --accent: 174 61% 56%;     /* #4ECDC4 (turquoise) */
       --accent-foreground: 0 0% 20%;
@@ -196,7 +196,7 @@
       --destructive: 2 100% 71%; /* same as primary */
       --destructive-foreground: 0 0% 100%;
 
-      --border: 36 100% 90%;
+      --border: 36 40% 82%;
       --input: 36 100% 92%;
       --ring: 2 100% 71%;
 
@@ -214,6 +214,11 @@
 @layer base {
   * {
     @apply border-border;
+  }
+
+  html.custom-cursor-hide,
+  html.custom-cursor-hide * {
+    cursor: none !important;
   }
 
   body {
@@ -271,5 +276,10 @@
 
   .text-3d-glow {
     text-shadow: var(--text-shadow-3d), var(--text-shadow-glow);
+  }
+
+  /* Section stripes: use muted token so contrast stays consistent across themes */
+  .bg-section-muted {
+    @apply bg-muted/60;
   }
 }

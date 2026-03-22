@@ -4,6 +4,7 @@ import { ducPortfolio } from "./duc";
 import { ilhamPortfolio } from "./ilham";
 import { brunoPortfolio } from "./bruno";
 import { juanPortfolio } from "./juan";
+import { kevinWpPortfolio } from "./kevin-wp";
 
 const portfolioRegistry: Record<string, Portfolio> = {
   [xiaomengPortfolio.id]: xiaomengPortfolio,
@@ -11,6 +12,7 @@ const portfolioRegistry: Record<string, Portfolio> = {
   [ilhamPortfolio.id]: ilhamPortfolio,
   [brunoPortfolio.id]: brunoPortfolio,
   [juanPortfolio.id]: juanPortfolio,
+  [kevinWpPortfolio.id]: kevinWpPortfolio,
 };
 
 export const getPortfolioIds = () => Object.keys(portfolioRegistry);

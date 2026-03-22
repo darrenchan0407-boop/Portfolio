@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import { BentoHomeSection } from "@/components/bento/BentoHomeSection";
 import About from "@/components/About";
 import Projects from "@/components/Projects";
 import Experience from "@/components/Experience";
@@ -22,13 +23,36 @@ const renderPortfolio = (portfolio: Portfolio) => {
           : "";
   const sections: SectionId[] =
     portfolio.sections ?? ["hero", "about", "projects", "experience", "contact"];
+  const navOverDarkHero =
+    sections[0] === "hero" && portfolio.heroVariant !== "minimal";
 
   return (
     <div className={`min-h-screen bg-background ${themeClass}`}>
-      <Navbar fullName={portfolio.fullName} linkedin={portfolio.contact.linkedin} />
+      <Navbar
+        fullName={portfolio.fullName}
+        linkedin={portfolio.contact.linkedin}
+        navOverDarkHero={navOverDarkHero}
+      />
       {sections.map((section) => {
         switch (section) {
           case "hero":
+            if (portfolio.heroVariant === "bento") {
+              return (
+                <>
+                  <Hero
+                    key="hero"
+                    fullName={portfolio.fullName}
+                    role={portfolio.hero.role}
+                    headline={portfolio.hero.headline}
+                    subheadline={portfolio.hero.subheadline}
+                    email={portfolio.contact.email}
+                    avatarImage={portfolio.hero.avatarImage}
+                    variant="default"
+                  />
+                  <BentoHomeSection key="bento" portfolio={portfolio} />
+                </>
+              );
+            }
             return (
               <Hero
                 key="hero"
@@ -80,7 +104,7 @@ const renderPortfolio = (portfolio: Portfolio) => {
         }
       })}
       <footer className="py-8 border-t border-border">
-        <div className="container text-center text-sm text-muted-foreground font-display">
+        <div className="container text-center text-sm font-display text-foreground/70">
           © {new Date().getFullYear()} {portfolio.fullName}. Built with passion.
         </div>
       </footer>

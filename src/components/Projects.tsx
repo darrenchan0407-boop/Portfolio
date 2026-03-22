@@ -15,7 +15,7 @@ const Projects = ({ primaryEmail, projects, variant = "grid" }: ProjectsProps) =
   const otherProjects = projects.filter((project) => !project.featured);
 
   return (
-    <section id="projects" className="py-24 bg-secondary/30">
+    <section id="projects" className="py-24 bg-section-muted">
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -24,10 +24,10 @@ const Projects = ({ primaryEmail, projects, variant = "grid" }: ProjectsProps) =
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">
+          <h2 className="text-4xl md:text-5xl font-display font-bold mb-6 text-foreground">
             Featured Work
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             A selection of projects showcasing expertise across fintech, healthcare, gaming, and enterprise platforms
           </p>
         </motion.div>
@@ -48,7 +48,7 @@ const Projects = ({ primaryEmail, projects, variant = "grid" }: ProjectsProps) =
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
-              <Card className="group overflow-hidden hover-scale bg-card border-border/50 shadow-card">
+              <Card className="group overflow-hidden hover-scale bg-card text-card-foreground border-border shadow-card">
                 <div className="relative aspect-[4/3] overflow-hidden">
                   {project.image && (
                     <img
@@ -67,7 +67,7 @@ const Projects = ({ primaryEmail, projects, variant = "grid" }: ProjectsProps) =
                 
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-3">
-                    <h3 className="text-xl font-display font-bold">{project.title}</h3>
+                    <h3 className="text-xl font-display font-bold text-foreground">{project.title}</h3>
                     <a
                       href={project.url}
                       target="_blank"
@@ -78,7 +78,7 @@ const Projects = ({ primaryEmail, projects, variant = "grid" }: ProjectsProps) =
                     </a>
                   </div>
                   
-                  <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+                  <p className="text-muted-foreground text-sm leading-relaxed mb-4 [text-rendering:optimizeLegibility]">
                     {project.description}
                   </p>
                   
@@ -106,7 +106,7 @@ const Projects = ({ primaryEmail, projects, variant = "grid" }: ProjectsProps) =
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h3 className="text-2xl font-display font-bold mb-8 text-center">
+          <h3 className="text-2xl font-display font-bold mb-8 text-center text-foreground">
             Additional Projects
           </h3>
           
@@ -119,7 +119,7 @@ const Projects = ({ primaryEmail, projects, variant = "grid" }: ProjectsProps) =
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="group overflow-hidden hover-scale bg-card border-border/50">
+                <Card className="group overflow-hidden hover-scale bg-card text-card-foreground border-border">
                   <div className="flex">
                     <div className="relative w-1/3 aspect-[4/3]">
                       {project.image && (
@@ -133,7 +133,7 @@ const Projects = ({ primaryEmail, projects, variant = "grid" }: ProjectsProps) =
                     
                     <div className="flex-1 p-4">
                       <div className="flex items-center justify-between mb-2">
-                        <h4 className="font-display font-bold">{project.title}</h4>
+                        <h4 className="font-display font-bold text-foreground">{project.title}</h4>
                         <a
                           href={project.url}
                           target="_blank"
@@ -148,7 +148,7 @@ const Projects = ({ primaryEmail, projects, variant = "grid" }: ProjectsProps) =
                         {project.category}
                       </Badge>
                       
-                      <p className="text-muted-foreground text-sm mb-3">
+                      <p className="text-muted-foreground text-sm mb-3 leading-relaxed">
                         {project.description}
                       </p>
                       
@@ -184,11 +184,11 @@ const Projects = ({ primaryEmail, projects, variant = "grid" }: ProjectsProps) =
           viewport={{ once: true }}
           className="text-center mt-16"
         >
-          <div className="bg-gradient-accent p-8 rounded-lg text-white">
-            <h3 className="text-2xl font-display font-bold mb-4">
+          <div className="bg-gradient-accent p-8 rounded-lg text-primary-foreground shadow-md">
+            <h3 className="text-2xl font-display font-bold mb-4 text-primary-foreground">
               Interested in Working Together?
             </h3>
-            <p className="text-lg mb-6 opacity-90">
+            <p className="text-lg mb-6 text-primary-foreground/95">
               Let's discuss how I can help bring your next project to life
             </p>
             <a

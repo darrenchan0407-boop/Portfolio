@@ -39,10 +39,10 @@ const About = ({ heading, paragraphs, contact }: AboutProps) => {
             className="order-2 lg:order-1"
           >
             <p className="text-primary font-display text-sm tracking-[0.3em] uppercase mb-4">About Me</p>
-            <h2 className="text-3xl md:text-5xl font-display font-bold tracking-tight mb-6 leading-[1.1]">
+            <h2 className="text-3xl md:text-5xl font-display font-bold tracking-tight mb-6 leading-[1.1] text-foreground">
               {heading}
             </h2>
-            <div className="space-y-4 text-muted-foreground leading-relaxed">
+            <div className="space-y-4 text-muted-foreground leading-relaxed [text-rendering:optimizeLegibility]">
               {paragraphs.map((text) => (
                 <p key={text}>{text}</p>
               ))}
@@ -71,7 +71,7 @@ const About = ({ heading, paragraphs, contact }: AboutProps) => {
                   <div>
                     <span className="text-muted-foreground">Location:</span>
                     <br />
-                    <span>{contact.location}</span>
+                    <span className="text-foreground">{contact.location}</span>
                   </div>
                 )}
               </div>
@@ -104,7 +104,7 @@ const About = ({ heading, paragraphs, contact }: AboutProps) => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
-            className="text-xl font-display font-semibold mb-12 text-center"
+            className="text-xl font-display font-semibold mb-12 text-center text-foreground"
           >
             Technical Expertise
           </motion.h3>
@@ -121,7 +121,7 @@ const About = ({ heading, paragraphs, contact }: AboutProps) => {
                 className="group p-6 rounded-xl bg-card/50 border border-border hover:border-primary/30 transition-all duration-300"
               >
                 <skill.icon className="w-8 h-8 text-primary mb-4 group-hover:scale-110 transition-transform" />
-                <h4 className="font-display font-semibold text-lg mb-3">{skill.label}</h4>
+                <h4 className="font-display font-semibold text-lg mb-3 text-foreground">{skill.label}</h4>
                 <ul className="space-y-1">
                   {skill.items.map((item) => (
                     <li key={item} className="text-sm text-muted-foreground">{item}</li>

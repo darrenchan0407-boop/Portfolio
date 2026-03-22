@@ -27,19 +27,21 @@ const Hero = ({
   const isMinimal = variant === "minimal";
   return (
     <section
+      id="home"
       className={`relative flex items-center justify-center overflow-hidden ${
         isMinimal ? "py-24 md:py-32" : "min-h-screen"
       }`}
     >
-      {/* Dynamic 3D Background */}
+      {/* Dynamic 3D Background — scrims use fixed dark tones so particles read the same on every page theme */}
       {!isMinimal && <ParticleBackground />}
-      {!isMinimal && <div className="absolute inset-0 bg-black/20" />}
+      {!isMinimal && <div className="absolute inset-0 bg-black/25" />}
       <div
-        className={`absolute inset-0 bg-gradient-to-t from-background/80 via-background/20 to-transparent ${
-          isMinimal ? "opacity-60" : ""
-        }`}
+            className={
+              isMinimal
+                ? "absolute inset-0 bg-gradient-to-t from-background/85 via-background/35 to-transparent"
+                : "absolute inset-0 bg-gradient-to-t from-black/50 via-black/15 to-transparent"
+            }
       />
-
 
       <div className="container relative z-10 text-center">
         <motion.div
@@ -53,10 +55,14 @@ const Hero = ({
             initial={{ opacity: 0, y: 30, scale: 0.8 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ delay: 0.3, duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-            className="text-6xl md:text-8xl lg:text-9xl font-display font-black mb-8 tracking-wide text-3d-glow bg-gradient-to-br from-foreground via-primary/90 to-foreground bg-clip-text text-transparent"
+            className={
+              isMinimal
+                ? "text-6xl md:text-8xl lg:text-9xl font-display font-black mb-8 tracking-wide text-3d-glow bg-gradient-to-br from-foreground via-primary/90 to-foreground bg-clip-text text-transparent"
+                : "text-6xl md:text-8xl lg:text-9xl font-display font-black mb-8 tracking-wide bg-gradient-to-br from-white via-primary/95 to-slate-200 bg-clip-text text-transparent [text-shadow:0_0_36px_rgba(255,255,255,0.2)]"
+            }
             style={{
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
             }}
           >
             {headline}
@@ -66,7 +72,9 @@ const Hero = ({
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.8 }}
-            className="text-xl md:text-2xl lg:text-3xl font-hero font-medium text-muted-foreground max-w-3xl mx-auto leading-relaxed"
+            className={`text-xl md:text-2xl lg:text-3xl font-hero font-medium max-w-3xl mx-auto leading-relaxed ${
+              isMinimal ? "text-foreground/85" : "text-white/85"
+            }`}
           >
             {subheadline}
           </motion.p>
@@ -76,10 +84,13 @@ const Hero = ({
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.0, duration: 0.8 }}
-            className="mt-12 text-sm text-muted-foreground"
+            className={`mt-12 text-sm ${isMinimal ? "text-foreground/80" : "text-white/75"}`}
           >
             Email:{" "}
-            <a href={`mailto:${email}`} className="text-primary hover:underline">
+            <a
+              href={`mailto:${email}`}
+              className={isMinimal ? "text-primary hover:underline" : "text-primary hover:underline drop-shadow-sm"}
+            >
               {email}
             </a>
           </motion.div>
@@ -98,8 +109,16 @@ const Hero = ({
           }`}
         >
           <div className={variant === "split" ? "text-left" : "text-right"}>
-            <h3 className="font-display font-semibold text-lg text-foreground">{fullName}</h3>
-            <p className="text-sm text-muted-foreground font-hero">{role}</p>
+            <h3
+              className={`font-display font-semibold text-lg ${isMinimal ? "text-foreground" : "text-white"}`}
+            >
+              {fullName}
+            </h3>
+            <p
+              className={`text-sm font-hero ${isMinimal ? "text-foreground/75" : "text-white/75"}`}
+            >
+              {role}
+            </p>
           </div>
           {avatarImage && (
             <div className="w-16 h-16 rounded-full bg-gradient-accent p-1 shadow-glow">
@@ -119,10 +138,10 @@ const Hero = ({
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.4, duration: 0.8 }}
-          className="absolute bottom-8 left-8 text-sm text-muted-foreground"
+          className="absolute bottom-8 left-8 text-sm text-white/70"
         >
           <Select value={language} onValueChange={setLanguage}>
-            <SelectTrigger className="w-28 bg-transparent border-none text-muted-foreground hover:text-foreground transition-colors focus:ring-0 focus:ring-offset-0 h-auto p-0 text-sm">
+            <SelectTrigger className="w-28 bg-transparent border-none text-white/70 hover:text-white transition-colors focus:ring-0 focus:ring-offset-0 h-auto p-0 text-sm">
               <SelectValue />
             </SelectTrigger>
             <SelectContent>

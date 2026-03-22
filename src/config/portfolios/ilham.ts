@@ -27,6 +27,7 @@ export const ilhamPortfolio: Portfolio = {
     {
       role: "Senior Software Engineer",
       company: "Navigate360",
+      companyDomain: "navigate360.com",
       period: "May 2024 – Present",
       location: "Remote",
       description:
@@ -45,6 +46,7 @@ export const ilhamPortfolio: Portfolio = {
     {
       role: "Senior Full-Stack Developer",
       company: "Altermyth",
+      companyDomain: "altermyth.com",
       period: "Aug 2023 – Mar 2024",
       location: "Remote",
       description:
@@ -62,6 +64,7 @@ export const ilhamPortfolio: Portfolio = {
     {
       role: "Full-Stack Developer",
       company: "Nodeflux",
+      companyDomain: "nodeflux.io",
       period: "Apr 2022 – Jun 2023",
       location: "Jakarta, Indonesia",
       description:
@@ -80,6 +83,7 @@ export const ilhamPortfolio: Portfolio = {
     {
       role: "Web Developer Intern",
       company: "Microsoft",
+      companyDomain: "microsoft.com",
       period: "Apr 2021 – Mar 2022",
       location: "Remote",
       description:
@@ -150,11 +154,14 @@ export const ilhamPortfolio: Portfolio = {
       featured: true,
     },
   ],
-  theme: "bright",
+  theme: "warm",
   sections: ["hero", "about", "experience", "projects", "contact"],
-  heroVariant: "default",
+  heroVariant: "bento",
   projectsVariant: "grid",
   experienceVariant: "default",
   contactVariant: "default",
+  bento: {
+    globeRegion: "sea",
+  },
 };
 

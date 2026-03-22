@@ -27,6 +27,7 @@ export const ducPortfolio: Portfolio = {
     {
       role: "Senior Software Engineer",
       company: "Vin",
+      companyDomain: "vingroup.net",
       period: "04/2024 – 02/2026",
       location: "Hanoi Capital Region, Vietnam",
       description:
@@ -43,6 +44,7 @@ export const ducPortfolio: Portfolio = {
     {
       role: "Senior Software Engineer",
       company: "Moatable",
+      companyDomain: "moatable.com",
       period: "05/2021 – 04/2024",
       location: "Hanoi Capital Region, Vietnam",
       description:
@@ -59,6 +61,7 @@ export const ducPortfolio: Portfolio = {
     {
       role: "Web Development Intern",
       company: "Amazon",
+      companyDomain: "amazon.com",
       period: "09/2020 – 05/2021",
       location: "Hanoi, Vietnam",
       description:
@@ -128,11 +131,14 @@ export const ducPortfolio: Portfolio = {
       featured: true,
     },
   ],
-  theme: "blue",
+  theme: "warm",
   sections: ["hero", "projects", "experience", "about", "contact"],
-  heroVariant: "split",
+  heroVariant: "bento",
   projectsVariant: "gallery",
   experienceVariant: "compact",
   contactVariant: "minimal",
+  bento: {
+    globeRegion: "sea",
+  },
 };
 
